@@ -12,6 +12,7 @@ return {
   cmd = 'Neotree',
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { 'gs', ':Neotree float git_status<CR>', desc = 'NeoTree Git Status Window', silent = true },
   },
   opts = {
     filesystem = {
