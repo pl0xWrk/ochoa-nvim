@@ -1,7 +1,8 @@
+*.gitignore
 tags
 test.sh
 .luarc.json
 nvim
-
+.ssh/
 spell/
 lazy-lock.json
