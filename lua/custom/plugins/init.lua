@@ -18,5 +18,7 @@ return {
     config = function()
       require('bufferline').setup {} -- bufferline
     end,
+    vim.keymap.set('n', '<C-K>', ':BufferLineCycleNext<CR>', { desc = 'Next tab' }),
+    vim.keymap.set('n', '<C-J>', ':BufferLineCyclePrev<CR>', { desc = 'Previous tab' }),
   },
 }
