@@ -616,7 +616,9 @@ require('lazy').setup({
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         -- ts_ls = {},
         --
-
+        clangd = {},
+        gopls = {},
+        pyright = {},
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
@@ -627,7 +629,7 @@ require('lazy').setup({
                 callSnippet = 'Replace',
               },
               -- You can toggle below to ignore Lua_LS's noisy `missing-fields` warnings
-              -- diagnostics = { disable = { 'missing-fields' } },
+              diagnostics = { disable = { 'missing-fields' } },
             },
           },
         },
