@@ -10,6 +10,8 @@ return {
     config = function()
       vim.opt.termguicolors = true
       require('bufferline').setup {}
+      vim.keymap.set('n', '\\e[1;7D', ':BufferLineCycleNext', { desc = 'Next bufferline tab' })
+      vim.keymap.set('n', '<C-<Alt>-<Left>>', ':BufferLineCyclePrev', { desc = 'Prev bufferline tab' })
     end,
   },
   {

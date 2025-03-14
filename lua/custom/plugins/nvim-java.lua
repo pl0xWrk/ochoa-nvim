@@ -18,6 +18,7 @@ return {
                 vim.keymap.set('n', '<C-F5>', ':JavaRunnerRunMain', { desc = 'Run Java application' })
               end,
             }
+            require('lspconfig').jdtls.setup {}
           end,
         },
       },
