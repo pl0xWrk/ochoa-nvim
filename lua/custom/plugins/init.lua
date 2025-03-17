@@ -10,8 +10,8 @@ return {
     config = function()
       vim.opt.termguicolors = true
       require('bufferline').setup {}
-      vim.keymap.set('n', '\\e[1;7D', ':BufferLineCycleNext', { desc = 'Next bufferline tab' })
-      vim.keymap.set('n', '<C-<Alt>-<Left>>', ':BufferLineCyclePrev', { desc = 'Prev bufferline tab' })
+      vim.keymap.set('n', '<C-]>', '<cmd>BufferLineCycleNext<cr>')
+      vim.keymap.set('n', '<C-[>', '<cmd>BufferLineCyclePrev<cr>')
     end,
   },
   {
@@ -25,5 +25,14 @@ return {
     config = function()
       require('oil').setup()
     end,
+  },
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {},
   },
 }
